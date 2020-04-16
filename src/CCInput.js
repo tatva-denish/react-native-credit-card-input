@@ -81,6 +81,7 @@ export default class CCInput extends Component {
             keyboardType={keyboardType}
             autoCapitalise="words"
             autoCorrect={false}
+            maxLength={19}
             style={[
               s.baseInputStyle,
               inputStyle,

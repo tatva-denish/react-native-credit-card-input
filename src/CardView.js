@@ -7,6 +7,7 @@ import {
   Text,
   StyleSheet,
   Platform,
+  TextInput
 } from "react-native";
 
 import defaultIcons from "./Icons";
@@ -137,9 +138,9 @@ export default class CardView extends Component {
             source={imageFront}>
               <Image style={[s.icon]}
                 source={Icons[brand]} />
-              <Text style={[s.baseText, { fontFamily }, s.number, !number && s.placeholder, focused === "number" && s.focused]}>
+              <TextInput maxLength={19} style={[s.baseText, { fontFamily }, s.number, !number && s.placeholder, focused === "number" && s.focused]}>
                 { !number ? placeholder.number : number }
-              </Text>
+              </TextInput>
               <Text style={[s.baseText, { fontFamily }, s.name, !name && s.placeholder, focused === "name" && s.focused]}
                 numberOfLines={1}>
                 { !name ? placeholder.name : name.toUpperCase() }

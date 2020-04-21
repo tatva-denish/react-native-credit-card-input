@@ -39,7 +39,6 @@ const s = StyleSheet.create({
   },
   number: {
     fontSize: 21,
-    position: "absolute",
     top: 95,
     left: 28,
   },

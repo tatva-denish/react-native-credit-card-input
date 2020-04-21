@@ -138,7 +138,9 @@ export default class CardView extends Component {
             source={imageFront}>
               <Image style={[s.icon]}
                 source={Icons[brand]} />
-              <TextInput maxLength={19} style={[s.baseText, { fontFamily }, s.number, !number && s.placeholder, focused === "number" && s.focused]}>
+              <TextInput maxLength={19}
+               style={[s.baseText, { fontFamily }, s.number, !number && s.placeholder, focused === "number" && s.focused]}
+               editable={false}>
                 { !number ? placeholder.number : number }
               </TextInput>
               <Text style={[s.baseText, { fontFamily }, s.name, !name && s.placeholder, focused === "name" && s.focused]}
